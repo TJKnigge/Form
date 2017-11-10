@@ -20,7 +20,7 @@
         <form>
             value:<br>
             <input type="text" name="name" size="size" maxlength="length" value="value">
-            
+            <br>
         </form>
         
         <?php
