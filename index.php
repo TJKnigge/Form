@@ -18,9 +18,13 @@
     <body>
         
         <form>
-            value:<br>
-            <input type="text" name="name" size="size" maxlength="length" value="value">
             <br>
+            First Name:<br> <input type="text" name="FirstName" value=""><br>
+            Surname:<br> <input type="text" name="Surname" value=""><br>
+            Birth date:<br> <input type="date" name="bday"><br><br>
+            Gender:<br><input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            
         </form>
         
         <?php
