@@ -17,9 +17,11 @@
     
     <body>
         
-        <form action="formfiller.php" method="post">
+
+        <form method="post">
+        
             <br>
-            First Name:<br><input type="text" name="FirstName" value="" placeholder='First'><br>
+            First Name:<br><input type="text" name='FirstName' value="" placeholder='First'><br>
             Surname:<br> <input type="text" name="Surname" value="" placeholder='Surname'><br>
             Birth date:<br> <input type="date" name="bday"><br><br>
             Gender:<br><input type="radio" name="gender" value="male"> Male
@@ -38,29 +40,41 @@
                         </select>
             
             
+            <br><br>
+            <input type="submit" value="Submit"><br>
             
         </form>
+      
         
         <?php  //formfiller.php
+                
+
         
-        $form = fopen("TheForm.txt", "a+") or die("Unable to open file!");
+        $TheForm = $_POST['FirstNam'] . "formulier.txt";
         
-        $list = <<<_END
-        
-        
-        $FirstName = get_post('FirstName');
-        $Surname = get_post('Surname');
+        $form = fopen($TheForm, "a+") or die("Unable to open file!");
         
        
-        _END
         
-        fwrite($form, $list);
+        $FirstName = $_POST['FirstName'] . " ; ";
+        fwrite($form, $FirstName);
+        $Surname = $_POST['Surname'] . " ; ";
+        fwrite($form, $Surname);        
+        $bday = $_POST['bday'] . " ; ";
+        fwrite($form, $bday);       
+        $gender = $_POST['gender'] . " ; ";
+        fwrite($form, $gender);
+        $Street = $_POST['Street'] . "\n";
+        fwrite($form, $Street);        
+        
+        
        
         
         fclose($form);
+                   
+       
         
         ?>
         
     </body>
 </html>
-
