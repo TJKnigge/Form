@@ -66,17 +66,17 @@
         <?php  //formfiller.php
                 
 
-      
         
-//        if (isset($_POST['FirstName'])){
-//        $var=$_POST['FirstName'];
-//         }
+//        $TheForm = $_POST['FirstName'] . "formulier.txt";
+        
+        if (isset($_POST['FirstName'])){
+        $TheForm=$_POST['FirstName'] . "formulier.txt";
+         
+//        fwrite($form, $FirstName);
+        }
         
         
-        
-        $TheForm = $_POST['FirstName'] . "formulier.txt";
-        
-        $form = fopen($TheForm, "a+") or die("Unable to open file!");
+        $form = fopen('FirstName', "a+") or die("Unable to open file!");
         
      
         
