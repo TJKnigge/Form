@@ -28,7 +28,8 @@
                        <input type="radio" name="gender" value="female"> Female<br><br><br><br>
             
             Address:<br><br>
-            Street:<br><input type="text" name="Street" value="" required><br>
+            Street:<br><input type="text" name="Street" value="" >
+            Housenumber<input type="text" name="num" maxlength="5"  size="4" value="" ><br>
             Zipcode & City:<br><input type="text" name="Zipcode" value=""> <input type="text" name="City" value=""><br>
             
             Country:<br><select name="cnt" size="1">
@@ -38,8 +39,9 @@
                         <option value="Great Britain">Great Britain</option>
                         <option value="France">France</option>
                         </select>
-            
-            
+            <br><br>
+            E-mail:<br> <input type="email" name="email"><br>
+                            
             <br><br>
             <input type="submit" value="Submit"><br>
             
@@ -56,19 +58,26 @@
         
        
         
-        $FirstName = $_POST['FirstName'] . " ; ";
+        $FirstName = $_POST['FirstName'] . "  ";
         fwrite($form, $FirstName);
-        $Surname = $_POST['Surname'] . " ; ";
+        $Surname = $_POST['Surname'] . "  ";
         fwrite($form, $Surname);        
-        $bday = $_POST['bday'] . " ; ";
+        $bday = $_POST['bday'] . "  ";
         fwrite($form, $bday);       
-        $gender = $_POST['gender'] . " ; ";
+        $gender = $_POST['gender'] . "  ";
         fwrite($form, $gender);
-        $Street = $_POST['Street'] . "\n";
+        $Street = $_POST['Street'] . "  ";
         fwrite($form, $Street);        
-        
-        
-       
+        $num = $_POST['num'] . "  ";
+        fwrite($form, $num);
+        $Zipcode = $_POST['Zipcode'] . "  ";
+        fwrite($form, $Zipcode);
+        $City = $_POST['City'] . "  ";
+        fwrite($form, $City);
+        $cnt = $_POST['cnt'] . "  ";
+        fwrite($form, $cnt);
+        $email = $_POST['email'] . "\n";
+        fwrite($form, $email);
         
         fclose($form);
                    
