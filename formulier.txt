@@ -1,3 +1,0 @@
-jur ; kn ; 2017-11-06 ; male ; sol
-tru ; gro ; 2017-11-08 ; female ; gro
-fra ; san ; 2017-11-13 ; male ; hui
