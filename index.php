@@ -66,33 +66,80 @@
         <?php  //formfiller.php
                 
 
+      
         
-        $TheForm = $_POST['FirstNam'] . "formulier.txt";
+//        if (isset($_POST['FirstName'])){
+//        $var=$_POST['FirstName'];
+//         }
+        
+        
+        
+        $TheForm = $_POST['FirstName'] . "formulier.txt";
         
         $form = fopen($TheForm, "a+") or die("Unable to open file!");
         
-       
+     
         
-        $FirstName = $_POST['FirstName'] . "  ";
+
+        if (isset($_POST['FirstName'])){
+        $FirstName=$_POST['FirstName'] . " ";
+         
         fwrite($form, $FirstName);
-        $Surname = $_POST['Surname'] . "  ";
-        fwrite($form, $Surname);        
-        $bday = $_POST['bday'] . "  ";
-        fwrite($form, $bday);       
-        $gender = $_POST['gender'] . "  ";
+        }
+              
+        if (isset($_POST['Surname'])){
+        $Surname=$_POST['Surname'] . " ";
+         
+        fwrite($form, $Surname);
+        }
+          
+        if (isset($_POST['bday'])){
+        $bday=$_POST['bday'] . " ";
+         
+        fwrite($form, $bday);
+        }
+          
+        if (isset($_POST['gender'])){
+        $gender=$_POST['gender'] . " ";
+         
         fwrite($form, $gender);
-        $Street = $_POST['Street'] . "  ";
-        fwrite($form, $Street);        
-        $num = $_POST['num'] . "  ";
+        }
+ 
+        if (isset($_POST['Street'])){
+        $Street=$_POST['Street'] . " ";
+         
+        fwrite($form, $Street);
+        }
+          
+        if (isset($_POST['num'])){
+        $num=$_POST['num'] . " ";
+         
         fwrite($form, $num);
-        $Zipcode = $_POST['Zipcode'] . "  ";
+        }
+        
+        if (isset($_POST['Zipcode'])){
+        $Zipcode=$_POST['Zipcode'] . " ";
+         
         fwrite($form, $Zipcode);
-        $City = $_POST['City'] . "  ";
+        }
+        
+        if (isset($_POST['City'])){
+        $City=$_POST['City'] . " ";
+         
         fwrite($form, $City);
-        $cnt = $_POST['cnt'] . "  ";
+        }
+        
+        if (isset($_POST['cnt'])){
+        $cnt=$_POST['cnt'] . " ";
+         
         fwrite($form, $cnt);
-        $email = $_POST['email'] . "\n";
+        }
+ 
+        if (isset($_POST['email'])){
+        $email=$_POST['email'] . "\n ";
+         
         fwrite($form, $email);
+        }
         
         fclose($form);
                    
